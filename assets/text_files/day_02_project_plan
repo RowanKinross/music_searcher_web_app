@@ -1,0 +1,38 @@
+1. Project Title
+Earworm Removal Services Ltd
+
+2. Project Description
+Find the song that's stuck in a user's head and help them through a therapy process to remove it
+
+3. User Story
+As a user (in the 90% who experience `earworms`)...
+I WANT...to be able to easily find the song that is stuck in my head
+SO THAT...I can unstick it
+
+4. Wireframe
+
+
+5. APIs to be used
+- MusiXMatch for finding the song through lyrics/artist/album etc
+- cocktail api for a song related recipe
+
+6. Rough breakdown of tasks
+- write a basic html (F)
+- script for API fetching (N)
+- script for taking user input - modal (R)
+- script for printing to the html (N)
+- script for local storage getting and setting (R)
+- CSS styling (F)
+
+
+7. How to use local storage
+-list of successful removals
+
+
+Order of process:
+1. User searches for lyrics/artist/title
+2. They're given the lyrics to read 
+3. They can then bin the lyrics or set the lyrics on fire, alternatively they'll be bombed at the end of the timer
+4. Confirm are you over 18? (21 in the US)
+    if yes: Once the lyrics are gone, they get a random recipe for a cocktail
+    if no: once the lyrics are gone, they get a random gif

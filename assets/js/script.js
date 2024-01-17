@@ -22,7 +22,7 @@ if (Object.entries(localStorage) != ``){
 function prependSongButton(){
   if (song != ``){
     const songButton = $(`<button>`).text(song).addClass(`btn btn-outline-primary m-1`).attr(`song-name`, song)
-    const clearButton = $(`<button>`).text(`X`).addClass(`btn btn-warning`)
+    const clearButton = $(`<button>`).text(`X`).addClass(`btn btn-warning clearButton`)
     const songDiv = $(`<div>`).append(songButton, clearButton)
     searchHistory.prepend(songDiv);
 }}
@@ -57,6 +57,13 @@ searchHistory.on(`click`, function(e){
 })
 
 //CLICK event when a user clicks on search history `X`
+$(`.clearButton`).on(`click`, function(e){
+  // e.preventDefault()
+  // var targetX = e.target
+  // var parentToX = targetX.parentElement
+  // parentToX.remove();
+})
+
 //clear search history button
 //CLICK event when a user clicks on on clear search history
 
