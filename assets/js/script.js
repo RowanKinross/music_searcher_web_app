@@ -2,6 +2,9 @@
 const searchHistory = $(`#history`)
 const searchArr = [];
 const clearAllButton = $(`.clearAll`);
+const listenedButton = $(`#listenedButton`);
+const lyricsButton = $(`#lyricsButton`);
+const sudokuButton = $(`#sudokuButton`)
 
 //__________________
 //Rowan :
@@ -44,6 +47,9 @@ $(`#search-form`).on(`submit`, function(e){
     localStorage.setItem(`searchArr`, searchArr)
     //clear form search bar
     $(`#search-input`).val(``)
+    //make search form hidden
+    $(`#search-form`).addClass(`hide`)
+    $(`#songDisplay`).removeClass(`hide`)
       }
 )
 
@@ -53,6 +59,39 @@ clearAllButton.on(`click`, function(e){
   localStorage.clear()
   searchHistory.empty()
 })
+
+//CLICK event when a user has listened to the song
+listenedButton.on(`click`, function(e){
+  e.preventDefault()
+  $(`#songDisplay`).addClass(`hide`)
+  $(`#lyricsDisplay`).removeClass(`hide`)
+})
+
+//CLICK event when a user has read the lyrics
+lyricsButton.on(`click`, function(e){
+  e.preventDefault()
+  $(`#lyricsDisplay`).addClass(`hide`)
+  $(`#activityDisplay`).removeClass(`hide`)
+})
+
+sudokuButton.on(`click`, function(e){
+  e.preventDefault()
+  $(`#activityDisplay`).addClass(`hide`)
+  $(`#songRecsDisplay`).removeClass(`hide`)
+})
+
+
+//sudoku fetch
+const queryURL = `https://sudoku-api.vercel.app/api/dosuku`
+fetch(queryURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+      console.log(data.newboard.grids[0].value)
+      // const sudoku = $(`<p>`).text(data.newboard.grids[0].value)
+      // $(`#activity`).append(sudoku)
+  })
 
 
 

@@ -1,0 +1,14 @@
+https://www.psychologytoday.com/gb/blog/women-who-stray/201505/5-steps-finally-get-song-out-your-head
+
+
+1. Identify the song playing in your head.
+  //search for a song on musiXmatch
+  // display song artist, song name & lyrics
+2. Search the internet and find a complete version of the song.
+  //try to get spotify api to work, else give links to music services
+3. Play it and listen to it. Spend that three minutes focused on it. Don’t do something else while it plays and limit yourself to half your attention; you might doom yourself to making it your permanent lifetime mental soundtrack.
+  //play player & display lyrics
+4. After the song is finished, immediately engage in a cognitively-engrossing activity. The researchers used sudoku on their participants, but you could also try crossword puzzles, word games, or some other activity that absorbs your attention and forces your brain to sweat a little bit. Avoid doing something that lets your mind wander
+  //sudoku api ?
+5. Finally, try replacing that earworm with another, favorite, well-known songs (although this might be an individualistic strategy).
+  //have this in text form maybe? also recommended songs
