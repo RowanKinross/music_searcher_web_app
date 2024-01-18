@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 'Poppins', 'san-serif';
+}
+
+header{
+    width: 100%;
+    background-color: rgb(167, 90, 240);
+    color: rgb(249, 230, 206);
+}
+
+.container-fluid{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-color: rgba(102, 68, 133,.5);
+    background-image: linear-gradient(rgba(0,8,51,0.9), rgba(0, 8, 51, 0.9), url('../images/background.jpg'));
+    background-position: center;
+    background-size: cover;
+}
+.col-lg-3{
+    display: grid;
+    width: 30%;
+    height: 150px;
+    border-radius: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    background-color: aliceblue;
+
+}
+#search-form{
+    display: flex;
+    
+}
