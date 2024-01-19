@@ -4,7 +4,10 @@ const searchArr = [];
 const clearAllButton = $(`.clearAll`);
 const listenedButton = $(`#listenedButton`);
 const lyricsButton = $(`#lyricsButton`);
-const sudokuButton = $(`#sudokuButton`)
+const sudokuButton = $(`#sudokuButton`);
+const sudokuTable = $(`.sudokuTable`)
+const revealSudoku = $(`#revealSudoku`)
+
 
 //__________________
 //Rowan :
@@ -48,17 +51,10 @@ $(`#search-form`).on(`submit`, function(e){
     //clear form search bar
     $(`#search-input`).val(``)
     //make search form hidden
-    $(`#search-form`).addClass(`hide`)
+    $(`#searchForm`).addClass(`hide`)
     $(`#songDisplay`).removeClass(`hide`)
       }
 )
-
-//CLICK event when a user clicks to clear search
-clearAllButton.on(`click`, function(e){
-  e.preventDefault()
-  localStorage.clear()
-  searchHistory.empty()
-})
 
 //CLICK event when a user has listened to the song
 listenedButton.on(`click`, function(e){
@@ -74,26 +70,66 @@ lyricsButton.on(`click`, function(e){
   $(`#activityDisplay`).removeClass(`hide`)
 })
 
+
+//sudoku fetch
+const queryURL = `https://sudoku-api.vercel.app/api/dosuku`
+fetch(queryURL)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  $(`.difficulty`).text(`difficulty: ${data.newboard.grids[0].difficulty}`)
+  const newTable = data.newboard.grids[0].value
+  const solution = data.newboard.grids[0].solution
+
+
+  //for loop to print array to html
+  function printSudoku(sudoku){
+  for (let i=0; i<9; i++){
+    const row = sudoku[i]
+    const rowEl = $(`<tr>`)
+    if (i===2 || i===5){
+      rowEl.addClass(`borderBottom`)
+    }
+    sudokuTable.append(rowEl)
+    for(let j=0; j<9; j++){
+      if (row[j] === 0){
+        var boxEl =$(`<td class="p-0"></td>`)
+        const boxInputEl = $(`<input type="text" class="form-control sudokuValue" value=""/>`)
+        boxEl.append(boxInputEl)
+      } else {
+        const boxSolutionEl = $(`<div>`).text(row[j])
+        var boxEl =$(`<td class="p-0"></td >`).append(boxSolutionEl)
+      }
+      rowEl.append(boxEl)
+      if (j===2 || j===5){
+        boxEl.addClass(`borderSide`)
+      }
+    }
+  }
+  } 
+  printSudoku(newTable)
+  // printSudoku(solution) (toggle between the solution and the table)
+  revealSudoku.on(`click`, function(e){
+    e.preventDefault()
+    sudokuTable.empty()
+    printSudoku(solution)
+  })
+
+})
+//CLICK event when sudoku finished
 sudokuButton.on(`click`, function(e){
   e.preventDefault()
   $(`#activityDisplay`).addClass(`hide`)
   $(`#songRecsDisplay`).removeClass(`hide`)
 })
 
-
-//sudoku fetch
-const queryURL = `https://sudoku-api.vercel.app/api/dosuku`
-fetch(queryURL)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-      console.log(data.newboard.grids[0].value)
-      // const sudoku = $(`<p>`).text(data.newboard.grids[0].value)
-      // $(`#activity`).append(sudoku)
-  })
-
-
+//CLICK event when a user clicks to clear search
+clearAllButton.on(`click`, function(e){
+  e.preventDefault()
+  localStorage.clear()
+  searchHistory.empty()
+})
 
 //_____________________
 // Nikoleta:
