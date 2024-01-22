@@ -4,10 +4,10 @@
 <head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha256-T6R1bNMP/BPFFbDzZQPblBx90Y1KEAUtGkG26F/DcDI=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha256-T6R1bNMP/BPFFbDzZQPblBx90Y1KEAUtGkG26F/DcDI=" crossorigin="anonymous" /> -->
   <link rel="stylesheet" href="./assets/styles/style.css">
-  <link rel="stylesheet" href="./assets/css/style2.css">
 
   <title>Earworm Extractor</title>
 </head>
@@ -18,14 +18,14 @@
   </section>
 
   <main>
-    <section id="searchform" class="col-lg-3">
+    <section id="searchform">
       <p>find your sound   -</p>
-      <div class="col-lg-3">
+      <div>
         <!-- Form input for user's song search -->
         <form id="search-form">
           <input type="text" id="search-input" placeholder="Your journey starts here....">
           <button type="submit" id="search-button">⌘</button>
-        </form>
+        </form> 
       </div>
     </section>
     <div id="stepOne">
@@ -35,10 +35,11 @@
 
     <div id="songDisplay" class="hide">
       <p>We think the song stuck in your head is:</p>
-      <h2 id="songTitle"></h2>
-      <p id="artist" class="artist"></p>
+      <p id="songOptions" class="songOptions"></p>
+      <p> [please wait if the title doesn't show up immediately] </p>
       <p>Step 2. We recommend listening to that song from start to finish, with no distractions.</p>
 <!-- favour to add links to spotify, youtube, etc with icons -->
+      <p>Spotify // Youtube // Apple Music </p>
       <button id="listenedButton">Listening done, but it is still stuck in my head</button>
     </div>
 
@@ -53,7 +54,7 @@
       <h2></h2>
       <p>Step 4. Engage in a cognitive activity, such as sudoku.</p>
       <p class="difficulty"></p>
-      <table class="activity table sudokuTable"></table>
+      <table id="sudokuTable" class="activity table sudokuTable"></table>
       <button id="revealSudoku">reveal solution</button>
       <button id="sudokuButton">I completed the sudoku but it's still stuck in my head</button>
     </div>
@@ -69,7 +70,7 @@
 
   </main>
 
-  <section>
+  <section class="searchHistory">
     <div id="history"></div>
     <button id="clearAllButton">Clear search history</button>
   </section>

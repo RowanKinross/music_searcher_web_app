@@ -21,6 +21,7 @@ if (Object.entries(localStorage) != ``){
     for (let i=0; i<storedArr.length; i++){
       song = storedArr[i]
       prependSongButton()
+      searchArr.push(song)
     }
   // load music info function()
 }}
@@ -39,6 +40,7 @@ $(`#search-form`).on(`submit`, function(e){
   song = $(`#search-input`).val().trim().toUpperCase()
     // load the music info for that song
         //call load music info function
+    displaySong()
     //if the searchArr is longer than 5, remove the 5th and push the most recent
     if (searchArr.length>=5){
       searchArr.splice(0, 1);}
@@ -51,7 +53,7 @@ $(`#search-form`).on(`submit`, function(e){
     //clear form search bar
     $(`#search-input`).val(``)
     //make search form hidden
-    $(`#searchForm`).addClass(`hide`)
+    $(`#searchform`).addClass(`hide`)
     $(`#stepOne`).addClass(`hide`)
     $(`#songDisplay`).removeClass(`hide`)
       }
@@ -89,9 +91,6 @@ fetch(queryURL)
   for (let i=0; i<9; i++){
     const row = sudoku[i]
     const rowEl = $(`<tr>`)
-    if (i===2 || i===5){
-      rowEl.addClass(`borderBottom`)
-    }
     sudokuTable.append(rowEl)
     for(let j=0; j<9; j++){
       if (row[j] === 0){
@@ -99,12 +98,15 @@ fetch(queryURL)
         const boxInputEl = $(`<input type="text" class="sudokuValue" value=""/>`)
         boxEl.append(boxInputEl)
       } else {
-        const boxSolutionEl = $(`<div>`).text(row[j])
-        var boxEl =$(`<td></td >`).append(boxSolutionEl)
+        const boxSolutionEl = $(`<div class="sudokuValue">`).text(row[j])
+        var boxEl =$(`<td class="sudokuValue"></td >`).append(boxSolutionEl)
       }
       rowEl.append(boxEl)
       if (j===2 || j===5){
         boxEl.addClass(`borderSide`)
+      }
+      if (i===2 || i===5){
+        boxEl.addClass(`borderBottom`)
       }
     }
   }
@@ -135,23 +137,36 @@ clearAllButton.on(`click`, function(e){
 
 
 //music search API
-const lyrics = `sticking with you`
-const url = `https://genius-song-lyrics1.p.rapidapi.com/search/?q=${lyrics}&per_page=10&page=1`;
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '2fc1062518msh547988416741708p14b7bbjsne75cb82bac04',
-		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
-	}
-};
-fetch(url, options)
-.then(function (response) {
-  return response.json();
-})
-.then(function (data) {
-  console.log(data)
-})
+function displaySong(){
+//!----------
+//! commented out to reduce API requests
+// const search = song
+// const url = `https://genius-song-lyrics1.p.rapidapi.com/search/?q=${search}&per_page=1&page=1`;
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '',
+// 		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
+// 	}
+// };
+// fetch(url, options)
+// .then(function (response) {
+//   return response.json();
+// })
+// .then(function (data) {
+//   //get song title and artist
+//   const songTitle = data.hits[0].result.full_title
+//   $(`#songOptions`).text(`${songTitle}`);
+//   const lyricsURL = $(`<a href=${data.hits[0].result.url} target="_blank">`).text(`${songTitle} lyrics`)
+//   $(`#lyrics`).append(lyricsURL)
 
+// })
+}
+
+
+
+//! still to do:
+//! make search history clickable
 
 
 
