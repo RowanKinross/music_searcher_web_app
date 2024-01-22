@@ -1,0 +1,24 @@
+10min presentation of the following:-
+
+1. Elevator Pitch
+    [one minute description of application]
+
+2. Concept
+    [What's your user story? What was your motivation for development?]
+
+3. Process
+    [What were the technologies used? How were the tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?]
+    Challenges: 
+    -finding free APIs that work
+
+4. Demo
+    
+5. Directions
+    [for future development]
+    -lyrics could be printed to the page rather than url
+    -sudoku could have dynamic styling to alert you if you have made a mistake and could give you mini-text options in the corner for the harder puzzles
+    -images could be added for song/artist
+    -song recommendations could be tailored to the song/genre
+
+6. Links
+    [deployed page & github repo]
