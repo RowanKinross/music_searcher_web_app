@@ -16,29 +16,29 @@
   <section>
     <h1>Earworm Extractor</h1>
   </section>
+
   <main>
     <section id="searchform" class="col-lg-3">
-      <p>find your sound </p>
+      <p>find your sound   -</p>
       <div class="col-lg-3">
+        <!-- Form input for user's song search -->
         <form id="search-form">
-           
-           <!-- Form input for user's song search -->
           <input type="text" id="search-input" placeholder="Your journey starts here....">
           <button type="submit" id="search-button">⌘</button>
         </form>
-          <div >
-            <h3>Step 1. Find your earworm.</h3>
-            <p>Search for any part of your song, artist name or lyric that you can remember and we will try our best to find it for you.</p>
-          </div>
       </div>
     </section>
+    <div id="stepOne">
+      <h3>Step 1. Find your earworm.</h3>
+      <p>Search for any part of your song, artist name or lyric that you can remember and we will try our best to find it for you.</p>
+    </div>
 
     <div id="songDisplay" class="hide">
       <p>We think the song stuck in your head is:</p>
       <h2 id="songTitle"></h2>
       <p id="artist" class="artist"></p>
       <p>Step 2. We recommend listening to that song from start to finish, with no distractions.</p>
-      <!-- favour to add links to spotify, youtube, etc with icons -->
+<!-- favour to add links to spotify, youtube, etc with icons -->
       <button id="listenedButton">Listening done, but it is still stuck in my head</button>
     </div>
 
@@ -71,6 +71,7 @@
 
   <section>
     <div id="history"></div>
+    <button id="clearAllButton">Clear search history</button>
   </section>
 
   <section>
@@ -81,7 +82,6 @@
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/js/script.js"></script>
-  <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
 </body>
 
 </html>

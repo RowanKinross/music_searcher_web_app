@@ -1,182 +1,168 @@
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- body {
-   height: 100vh;
-   display: flex;
-   flex-direction: column;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   overflow: hidden;
- }
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow: hidden;
+}
 
- main {
-   height: 80%;
-   background-color: #B8A6B3;
-   /* Vintage Lavender */
-   color: #544738;
-   /* Dark Brown Text */
-   flex-direction: column;
-   align-items: center;
-   /* Center horizontally */
-   padding: 20px;
- }
+main {
+  height: 80%;
+  background-color: #B8A6B3;
+  /* Vintage Lavender */
+  color: #544738;
+  /* Dark Brown Text */
+  flex-direction: column;
+  align-items: center;
+  /* Center horizontally */
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
 
- main {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   box-sizing: border-box;
-   font-family: 'Times New Roman', Times, serif;
- }
+h1 {
+  color: blanchedalmond;
+  font-size: 60px;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 20px;
+}
 
- section {
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   box-sizing: border-box;
-   font-family: 'Times New Roman', Times, serif;
- }
 
- section:nth-child(1) {
-   height: 10%;
-   background-color: #D3BCC0;
-   /* Vintage Pale Mauve */
-   color: #544738;
-   /* Dark Brown Text */
- }
 
- section:nth-child(3) {
-   height: 10%;
-   background-color: #D3BCC0;
-   /* Vintage Pale Mauve */
-   color: #544738;
-   /* Dark Brown Text */
- }
+/* main section */
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
 
- section:nth-child(4) {
-   height: 30px;
- }
+/* section nth child 1 */
+section:nth-child(1) {
+  height: 10%;
+  background-color: #D3BCC0;
+  /* Vintage Pale Mauve */
+  color: #544738;
+  /* Dark Brown Text */
+}
 
- section:nth-child(2) {
-   height: 100%;
-   background-color: #B8A6B3;
-   /* Vintage Lavender */
-   color: #544738;
-   /* Dark Brown Text */
-   flex-direction: column;
-   align-items: center;
-   /* Center horizontally */
-   padding: 20px;
- }
+/* section nth child 2 */
+section:nth-child(2) {
+  height: 100%;
+  background-color: #B8A6B3;
+  /* Vintage Lavender */
+  color: #544738;
+  /* Dark Brown Text */
+  flex-direction: column;
+  align-items: center;
+  /* Center horizontally */
+  padding: 20px;
+}
+section:nth-child(2) .col-lg-3 {
+  display: flex;
+  width: 50%;
+  /* Takes 50% of the width */
+  align-items: center;
+  /* Center horizontally */
+}
+section:nth-child(2) input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #544738;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+section:nth-child(2) button {
+  width: 35px;
+  height: 100%;
+  color: #B8A6B3;
+  /* Vintage Lavender Text */
+}
+section:nth-child(2) h2 {
+  margin-bottom: 20px;
+}
 
- section:nth-child(2) .col-lg-3 {
-   display: flex;
-   width: 50%;
-   /* Takes 50% of the width */
-   align-items: center;
-   /* Center horizontally */
- }
+/* section nth child 3 */
+section:nth-child(3) {
+  height: 10%;
+  background-color: #D3BCC0;
+  /* Vintage Pale Mauve */
+  color: #544738;
+  /* Dark Brown Text */
+}
 
- section:nth-child(2) input[type="text"] {
-   flex: 1;
-   padding: 10px;
-   border: 1px solid #544738;
-   border-radius: 5px;
-   margin-right: 10px;
- }
+/* section nth child 4 */
+section:nth-child(4) {
+  height: 30px;
+  background-color: #fcf8f8;
+  /* Vintage Pale Mauve */
+  color: #544738;
+  /* Dark Brown Text */
+}
 
- h1 {
-   color: blanchedalmond;
-   font-size: 60px;
-   text-shadow: 2px 2px 2px black;
-   margin-bottom: 20px;
- }
 
- section:nth-child(2) button {
-   width: 35px;
-   height: 100%;
-   background-color: #544738;
-   color: #B8A6B3;
-   /* Vintage Lavender Text */
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
- }
 
- section:nth-child(2) h2 {
-   margin-bottom: 20px;
- }
 
- section:nth-child(4) {
-   background-color: #fcf8f8;
-   /* Vintage Pale Mauve */
-   color: #544738;
-   /* Dark Brown Text */
- }
+/* input boxes */
+input {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 5px;
+  padding: 8px 40px 20px 20px;
+  border: none;
+}
+input :focus {
+  outline: none;
+}
 
- input {
-   width: 100%;
-   height: 100%;
-   display: block;
-   border-radius: 5px;
-   padding: 8px 40px 20px 20px;
-   border: none;
 
- }
+/*generic button styling */
+button {
+  color: #fcf8f8;
+  /* Vintage Pale Mauve */
+  background-color: #544738;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+button:hover {
+  border: 2px solid;
+  background-color:  #7e684e;
+}
 
- button {
-   color: #fcf8f8;
-   /* Vintage Pale Mauve */
-   background-color: #544738;
-   border: none;
-   padding: 10px;
-   border-radius: 5px;
- }
 
- input :focus {
-   outline: none;
- }
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-size: 'Poppins', 'san-serif';
- }
+/* search form (step 1) */
+#search-form {
+  display: flex;
+}
 
- header {
-   width: 100%;
-   text-align: center;
-   background-color: rgb(167, 90, 240);
-   color: rgb(249, 230, 206);
- }
+/* sudoku styling */
+.sudokuTable {
+  width: 400px;
+  text-align: center;
+}
+.borderBottom {
+  border-bottom: solid 2px black;
+}
+.borderSide {
+  border-right: solid 3px black;
+}
 
- .container-fluid {}
-
- .col-lg-3 {}
-
- #search-form {
-   display: flex;
-
- }
-
- .sudokuTable {
-   width: 400px;
-   text-align: center;
- }
-
- .borderBottom {
-   border-bottom: solid 2px black;
- }
-
- .borderSide {
-   border-right: solid 3px black;
- }
-
- .hide {
-   display: none;
- }
+/* hiding sub-sections for dynamic transitions */
+.hide {
+  display: none;
+}

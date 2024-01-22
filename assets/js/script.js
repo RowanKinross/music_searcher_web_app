@@ -1,7 +1,7 @@
 //const APIKey = `` //<--insert own API key here
 const searchHistory = $(`#history`)
 const searchArr = [];
-const clearAllButton = $(`.clearAll`);
+const clearAllButton = $(`#clearAllButton`);
 const listenedButton = $(`#listenedButton`);
 const lyricsButton = $(`#lyricsButton`);
 const sudokuButton = $(`#sudokuButton`);
@@ -28,7 +28,7 @@ if (Object.entries(localStorage) != ``){
 //prepend searched for songs as buttons in a function:
 function prependSongButton(){
   if (song != ``){
-    const songButton = $(`<button>`).text(song).addClass(`btn btn-outline-primary m-1`).attr(`song-name`, song)
+    const songButton = $(`<button>`).text(song).attr(`song-name`, song)
     const songDiv = $(`<div>`).append(songButton)
     searchHistory.prepend(songDiv);
 }}
@@ -52,6 +52,7 @@ $(`#search-form`).on(`submit`, function(e){
     $(`#search-input`).val(``)
     //make search form hidden
     $(`#searchForm`).addClass(`hide`)
+    $(`#stepOne`).addClass(`hide`)
     $(`#songDisplay`).removeClass(`hide`)
       }
 )
@@ -94,12 +95,12 @@ fetch(queryURL)
     sudokuTable.append(rowEl)
     for(let j=0; j<9; j++){
       if (row[j] === 0){
-        var boxEl =$(`<td class="p-0"></td>`)
-        const boxInputEl = $(`<input type="text" class="form-control sudokuValue" value=""/>`)
+        var boxEl =$(`<td></td>`)
+        const boxInputEl = $(`<input type="text" class="sudokuValue" value=""/>`)
         boxEl.append(boxInputEl)
       } else {
         const boxSolutionEl = $(`<div>`).text(row[j])
-        var boxEl =$(`<td class="p-0"></td >`).append(boxSolutionEl)
+        var boxEl =$(`<td></td >`).append(boxSolutionEl)
       }
       rowEl.append(boxEl)
       if (j===2 || j===5){
