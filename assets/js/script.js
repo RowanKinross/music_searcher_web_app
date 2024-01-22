@@ -109,7 +109,7 @@ fetch(queryURL)
   }
   } 
   printSudoku(newTable)
-  // printSudoku(solution) (toggle between the solution and the table)
+  // printSudoku(solution)
   revealSudoku.on(`click`, function(e){
     e.preventDefault()
     sudokuTable.empty()
@@ -131,8 +131,29 @@ clearAllButton.on(`click`, function(e){
   searchHistory.empty()
 })
 
+
+
+//music search API
+const lyrics = `sticking with you`
+const url = `https://genius-song-lyrics1.p.rapidapi.com/search/?q=${lyrics}&per_page=10&page=1`;
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '2fc1062518msh547988416741708p14b7bbjsne75cb82bac04',
+		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
+	}
+};
+fetch(url, options)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data)
+})
+
+
+
+
+
 //_____________________
 // Nikoleta:
-
-// load music information function:
-  //fetch

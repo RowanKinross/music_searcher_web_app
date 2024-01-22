@@ -1,0 +1,33 @@
+
+
+1. Project Title
+Earworm Extractors
+
+2. Project Description
+An app to help you to remove a song which is stuck in your head. It takes you through a severa step process,, including locating the song, enouraging you to play it all the way through, distracting you and making recommendatiosn for other songs to listen to.
+
+3. User Story
+As a user (in the 90% who experience `earworms`)...
+I WANT...to be able to easily find the song that is stuck in my head
+SO THAT...I can unstick it
+
+4. Wireframe
+
+
+5. APIs to be used
+API 01: for lyrics/artist/song - https://rapidapi.com/Glavier/api/genius-song-lyrics1
+API 02: for sudoku - https://sudoku-api.vercel.app/
+
+
+6. Rough breakdown of tasks
+- write a basic html (F)
+- script for API fetching (N)
+- script for taking user input - modal (R)
+- script for printing to the html (N)
+- script for local storage getting and setting (R)
+- CSS styling (F)
+
+
+7. How to use local storage
+-previous searches
+
