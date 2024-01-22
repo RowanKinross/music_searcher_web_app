@@ -114,16 +114,16 @@ section:nth-child(4) {
 
 
 
-/* input boxes */
-input {
+/* input boxes - for both the user search */
+#search-input {
   width: 100%;
   height: 100%;
   display: block;
   border-radius: 5px;
-  padding: 8px 40px 20px 20px;
+  padding: 10px;
   border: none;
 }
-input :focus {
+#search-input :focus {
   outline: none;
 }
 
@@ -151,12 +151,17 @@ button:hover {
 }
 
 /* sudoku styling */
-.sudokuTable {
-  width: 400px;
+#sudokuTable {
+  width: 100px;
   text-align: center;
+  padding: 20px;
+}
+.sudokuValue{
+  width: 20px;
+  height: 20px;
 }
 .borderBottom {
-  border-bottom: solid 2px black;
+  border-bottom: solid 3px black;
 }
 .borderSide {
   border-right: solid 3px black;
@@ -165,4 +170,11 @@ button:hover {
 /* hiding sub-sections for dynamic transitions */
 .hide {
   display: none;
+}
+
+.searchHistory, #history {
+  display: flex;
+}
+#clearAllButton{
+  background-color: rgb(179, 119, 8);
 }
