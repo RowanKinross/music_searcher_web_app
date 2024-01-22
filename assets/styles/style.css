@@ -1,56 +1,182 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 'Poppins', 'san-serif';
-}
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
 
-header{
-  width: 100%;
-  text-align: center;
-  background-color: rgb(167, 90, 240);
-  color: rgb(249, 230, 206);
-}
+ body {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   overflow: hidden;
+ }
 
-.container-fluid{
-  width: 100%;
-  min-height: 100vh;
-  padding: 5%;
-  background-color: rgba(102, 68, 133,.5);
-  background-image: linear-gradient(rgba(0,8,51,0.9), rgba(0, 8, 51, 0.9), url('../images/background.jpg'));
-  background-position: center;
-  background-size: cover;
-  
-}
-.col-lg-3{
-  display: grid;
-  width: 30%;
-  height: 150px;
-  border-radius: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
-  align-items: center;
-  background-color: aliceblue;
+ main {
+   height: 80%;
+   background-color: #B8A6B3;
+   /* Vintage Lavender */
+   color: #544738;
+   /* Dark Brown Text */
+   flex-direction: column;
+   align-items: center;
+   /* Center horizontally */
+   padding: 20px;
+ }
 
-}
-#search-form{
-  display: flex;
-  
-}
+ main {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   font-family: 'Times New Roman', Times, serif;
+ }
 
- .sudokuTable{
-  width: 400px;
-  text-align: center;
-}
+ section {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   font-family: 'Times New Roman', Times, serif;
+ }
 
-.borderBottom{
-  border-bottom: solid 2px black;
-}
-.borderSide{
-  border-right: solid 3px black;
-}
+ section:nth-child(1) {
+   height: 10%;
+   background-color: #D3BCC0;
+   /* Vintage Pale Mauve */
+   color: #544738;
+   /* Dark Brown Text */
+ }
 
-.hide {
-  display: none;
-} 
+ section:nth-child(3) {
+   height: 10%;
+   background-color: #D3BCC0;
+   /* Vintage Pale Mauve */
+   color: #544738;
+   /* Dark Brown Text */
+ }
 
+ section:nth-child(4) {
+   height: 30px;
+ }
+
+ section:nth-child(2) {
+   height: 100%;
+   background-color: #B8A6B3;
+   /* Vintage Lavender */
+   color: #544738;
+   /* Dark Brown Text */
+   flex-direction: column;
+   align-items: center;
+   /* Center horizontally */
+   padding: 20px;
+ }
+
+ section:nth-child(2) .col-lg-3 {
+   display: flex;
+   width: 50%;
+   /* Takes 50% of the width */
+   align-items: center;
+   /* Center horizontally */
+ }
+
+ section:nth-child(2) input[type="text"] {
+   flex: 1;
+   padding: 10px;
+   border: 1px solid #544738;
+   border-radius: 5px;
+   margin-right: 10px;
+ }
+
+ h1 {
+   color: blanchedalmond;
+   font-size: 60px;
+   text-shadow: 2px 2px 2px black;
+   margin-bottom: 20px;
+ }
+
+ section:nth-child(2) button {
+   width: 35px;
+   height: 100%;
+   background-color: #544738;
+   color: #B8A6B3;
+   /* Vintage Lavender Text */
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+
+ section:nth-child(2) h2 {
+   margin-bottom: 20px;
+ }
+
+ section:nth-child(4) {
+   background-color: #fcf8f8;
+   /* Vintage Pale Mauve */
+   color: #544738;
+   /* Dark Brown Text */
+ }
+
+ input {
+   width: 100%;
+   height: 100%;
+   display: block;
+   border-radius: 5px;
+   padding: 8px 40px 20px 20px;
+   border: none;
+
+ }
+
+ button {
+   color: #fcf8f8;
+   /* Vintage Pale Mauve */
+   background-color: #544738;
+   border: none;
+   padding: 10px;
+   border-radius: 5px;
+ }
+
+ input :focus {
+   outline: none;
+ }
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-size: 'Poppins', 'san-serif';
+ }
+
+ header {
+   width: 100%;
+   text-align: center;
+   background-color: rgb(167, 90, 240);
+   color: rgb(249, 230, 206);
+ }
+
+ .container-fluid {}
+
+ .col-lg-3 {}
+
+ #search-form {
+   display: flex;
+
+ }
+
+ .sudokuTable {
+   width: 400px;
+   text-align: center;
+ }
+
+ .borderBottom {
+   border-bottom: solid 2px black;
+ }
+
+ .borderSide {
+   border-right: solid 3px black;
+ }
+
+ .hide {
+   display: none;
+ }
