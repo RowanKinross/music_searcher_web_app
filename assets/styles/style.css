@@ -192,7 +192,7 @@ a{
   color: #544738;
 }
 a :hover{
-  color: antiquewhite;
+  color: rgb(250, 235, 215);
 }
 #searchform{
   height: 300px;
