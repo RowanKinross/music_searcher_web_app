@@ -175,6 +175,12 @@ button:hover {
 .searchHistory, #history {
   display: flex;
 }
+#history button{
+  margin-left: 10px;
+    border: solid;
+    color: #544738;
+    background-color: #D3BCC0;
+}
 #clearAllButton{
-  background-color: rgb(179, 119, 8);
+  background-color: #544738;
 }
