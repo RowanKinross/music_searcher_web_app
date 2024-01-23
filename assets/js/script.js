@@ -55,7 +55,8 @@ $(`#search-form`).on(`submit`, function(e){
     //make search form hidden
     $(`#searchform`).addClass(`hide`)
     $(`#stepOne`).addClass(`hide`)
-    $(`#songDisplay`).removeClass(`hide`)
+    $(`#findYourSound`).addClass(`hide`)
+    $(`#songDisplay`).removeClass(`hide`).addClass(`show`)
       }
 )
 
@@ -63,14 +64,14 @@ $(`#search-form`).on(`submit`, function(e){
 listenedButton.on(`click`, function(e){
   e.preventDefault()
   $(`#songDisplay`).addClass(`hide`)
-  $(`#lyricsDisplay`).removeClass(`hide`)
+  $(`#lyricsDisplay`).removeClass(`hide`).addClass(`show`)
 })
 
 //CLICK event when a user has read the lyrics
 lyricsButton.on(`click`, function(e){
   e.preventDefault()
   $(`#lyricsDisplay`).addClass(`hide`)
-  $(`#activityDisplay`).removeClass(`hide`)
+  $(`#activityDisplay`).removeClass(`hide`).addClass(`show`)
 })
 
 
@@ -124,7 +125,7 @@ fetch(queryURL)
 sudokuButton.on(`click`, function(e){
   e.preventDefault()
   $(`#activityDisplay`).addClass(`hide`)
-  $(`#songRecsDisplay`).removeClass(`hide`)
+  $(`#songRecsDisplay`).removeClass(`hide`).addClass(`show`)
 })
 
 //CLICK event when a user clicks to clear search
@@ -164,17 +165,45 @@ function displaySong(){
 }
 
 
+
+
+
+// 87da8ceb3cmsh47e55b14fb5df33p1b27fbjsn54acddce7032
+
+//   //get lyrics
+//   const songLyrics = data.hits[0].result
+//   console.log(songLyrics.id)
+//   // $(`#lyrics`).text(`${songLyrics}`)
+//   const lyricsID = songLyrics.id;
+//   const url = `https://genius-song-lyrics1.p.rapidapi.com/song/lyrics/?id=${lyricsID}`;
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '',
+// 		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
+// 	}
+// };
+//   fetch(url, options)
+//   .then(function(response){
+//     return response.json();
+//   })
+//   .then(function(data){
+//     console.log(data)
+//   })
+
+
 //!---------------
 //! still to do:
   //! make search history clickable
   //! deploy page 
-      //! unomment api
+      //! uncomment api
       //! get a new key at last min before presentation to ensure we have enough requests left)
   //! more styling
       //! links to spotify, youtube etc on the `step 2` display
       //! refactor code so there's no repeats/dry code, ideally tagging styles to classes and IDs instead of elements
   //! add song recommendations to `step 5` display
   //! readMe
+  //! footer waffles
 
 
 

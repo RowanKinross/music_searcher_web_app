@@ -173,6 +173,11 @@ button:hover {
 }
 
 /* hiding sub-sections for dynamic transitions */
+.show {
+  height: 100%;
+  background-color: #D3BCC0;
+  /* Vintage Pale Mauve */
+}
 .hide {
   display: none;
 }
