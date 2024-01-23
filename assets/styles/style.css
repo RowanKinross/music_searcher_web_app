@@ -65,7 +65,7 @@ section:nth-child(1) {
 /* section nth child 2 */
 section:nth-child(2) {
   height: 100%;
-  background-color: #B8A6B3;
+  /*background-color: #B8A6B3;*/
   /* Vintage Lavender */
   color: #544738;
   /* Dark Brown Text */
@@ -74,7 +74,7 @@ section:nth-child(2) {
   /* Center horizontally */
   padding: 20px;
 }
-section:nth-child(2) .col-lg-3 {
+section:nth-child(2){
   display: flex;
   width: 50%;
   /* Takes 50% of the width */
@@ -183,7 +183,20 @@ button:hover {
 .show {
   height: 100%;
   background-color: #D3BCC0;
+  border-radius: 25px;
+  
   /* Vintage Pale Mauve */
+}
+a{
+  text-decoration: none;
+  color: #544738;
+}
+a :hover{
+  color: antiquewhite;
+}
+#searchform{
+  height: 300px;
+  width: 900px;
 }
 .hide {
   display: none;
