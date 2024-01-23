@@ -15,7 +15,7 @@ const returnToStart = $(`#returnToStart`);
 
 //Get any locally stored search history
   searchHistory.empty()
-if (Object.entries(localStorage) != ``){
+if (localStorage.getItem(`searchArr`) != null){
   const storedArr = localStorage.getItem(`searchArr`).split(`,`)
   // prepend search history buttons
   if (storedArr != null){
