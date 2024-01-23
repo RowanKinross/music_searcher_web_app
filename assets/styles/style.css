@@ -163,8 +163,13 @@ button:hover {
 }
 
 /* sudoku styling */
+.sudokuDivEl{
+  display: flex;
+  justify-content: center;
+}
 #sudokuTable {
-  width: 100px;
+  display: grid;
+  height: 100%;
   text-align: center;
   padding: 20px;
 }
@@ -181,7 +186,6 @@ button:hover {
 
 /* hiding sub-sections for dynamic transitions */
 .show {
-  height: 100%;
   background-color: #D3BCC0;
   /* Vintage Pale Mauve */
 }
