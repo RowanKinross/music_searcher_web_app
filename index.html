@@ -5,8 +5,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/styles/reset.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha256-T6R1bNMP/BPFFbDzZQPblBx90Y1KEAUtGkG26F/DcDI=" crossorigin="anonymous" /> -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha256-T6R1bNMP/BPFFbDzZQPblBx90Y1KEAUtGkG26F/DcDI=" crossorigin="anonymous" />
   <link rel="stylesheet" href="./assets/styles/style.css">
 
   <title>Earworm Extractor</title>
@@ -14,23 +14,25 @@
 
 <body>
   <section>
-    <h1>Earworm Extractor</h1>
+    <h1>earworm extractor</h1>
   </section>
 
   <main>
     <section id="searchform">
-      <p>find your sound   -</p>
-      <div>
-        <!-- Form input for user's song search -->
-        <form id="search-form">
-          <input type="text" id="search-input" placeholder="Your journey starts here....">
-          <button type="submit" id="search-button">⌘</button>
-        </form> 
+      <div id="stepOne">
+        <h3>Step 1. Find your earworm.</h3>
+        <p>Search for any part of your song, artist name or lyric that you can remember and we will try our best to find it
+          for you.</p>
       </div>
     </section>
-    <div id="stepOne">
-      <h3>Step 1. Find your earworm.</h3>
-      <p>Search for any part of your song, artist name or lyric that you can remember and we will try our best to find it for you.</p>
+   
+    <p>find your sound -</p>
+    <div>
+      <!-- Form input for user's song search -->
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Your journey starts here....">
+        <button type="submit" id="search-button">⌘</button>
+      </form>
     </div>
 
     <div id="songDisplay" class="hide">
