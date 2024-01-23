@@ -204,10 +204,8 @@ function displaySong(){
       //! uncomment api
       //! get a new key at last min before presentation to ensure we have enough requests left)
   //! more styling
-      //! links to spotify, youtube etc on the `step 2` display
       //! refactor code so there's no repeats/dry code, ideally tagging styles to classes and IDs instead of elements
   //! add song recommendations to `step 5` display
-  //! readMe
   //! footer waffles
 
 
