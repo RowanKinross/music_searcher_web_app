@@ -7,6 +7,7 @@ const lyricsButton = $(`#lyricsButton`);
 const sudokuButton = $(`#sudokuButton`);
 const sudokuTable = $(`.sudokuTable`)
 const revealSudoku = $(`#revealSudoku`)
+const returnToStart = $(`#returnToStart`);
 
 
 //__________________
@@ -135,6 +136,10 @@ clearAllButton.on(`click`, function(e){
   searchHistory.empty()
 })
 
+returnToStart.on(`click`, function(e){
+  e.preventDefault()
+  location.reload()
+})
 
 
 //music search API
