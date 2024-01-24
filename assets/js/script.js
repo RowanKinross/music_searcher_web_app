@@ -1,5 +1,6 @@
 //const APIKey = `` //<--insert own API key here
 const searchHistory = $(`#history`)
+const searchHistorySection = $(`.searchHistory`);
 const searchArr = [];
 const clearAllButton = $(`#clearAllButton`);
 const listenedButton = $(`#listenedButton`);
@@ -60,6 +61,19 @@ $(`#search-form`).on(`submit`, function(e){
     $(`#songDisplay`).removeClass(`hide`).addClass(`show`)
       }
 )
+
+//Let user go back to previous results
+searchHistory.on(`click`, function(e) {
+  e.preventDefault()
+  song = e.target.textContent
+  displaySong()
+  console.log(song)
+  $(`#searchform`).addClass(`hide`)
+  $(`#stepOne`).addClass(`hide`)
+  $(`#findYourSound`).addClass(`hide`)
+  $(`#songDisplay`).removeClass(`hide`).addClass(`show`)
+  searchHistorySection.addClass(`hide`)
+});
 
 //CLICK event when a user has listened to the song
 listenedButton.on(`click`, function(e){
