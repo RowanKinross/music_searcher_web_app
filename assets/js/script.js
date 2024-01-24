@@ -10,10 +10,6 @@ const sudokuTable = $(`.sudokuTable`)
 const revealSudoku = $(`#revealSudoku`)
 const returnToStart = $(`#returnToStart`);
 
-
-//__________________
-//Rowan :
-
 //Get any locally stored search history
   searchHistory.empty()
 if (localStorage.getItem(`searchArr`) != null){
@@ -90,7 +86,6 @@ lyricsButton.on(`click`, function(e){
   $(`#lyricsDisplay`).addClass(`hide`)
   $(`#activityDisplay`).removeClass(`hide`).addClass(`show`)
 })
-
 
 //sudoku fetch
 const queryURL = `https://sudoku-api.vercel.app/api/dosuku`
@@ -193,18 +188,8 @@ function displaySong(){
 
 
 //!---------------
-//! still to do:
-  //! make search history clickable
-  //! deploy page 
+//! still to do: 
       //! uncomment api
-      //! get a new key at last min before presentation to ensure we have enough requests left)
   //! more styling
       //! refactor code so there's no repeats/dry code, ideally tagging styles to classes and IDs instead of elements
   //! add song recommendations to `step 5` display
-  //! footer waffles
-
-
-
-
-//_____________________
-// Nikoleta:
