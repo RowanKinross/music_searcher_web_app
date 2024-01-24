@@ -2,6 +2,22 @@
   font-family:ret;
   src: url(../fonts/Retro\ Gaming.ttf);
 }
+
+@media screen and (max-width: 768px) {
+  #searchform {
+    height: 40vw;
+    width: 95vw;
+    padding: 2vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #searchform {
+
+        height: 15vw;
+        width: 55vw;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +51,7 @@ main {
 
 h1 {
   color: blanchedalmond;
-  font-size: 60px;
+  font-size: 4.5vw;
   font-family: ret;
   text-shadow: 2px 2px 2px black;
   margin-bottom: 20px;
@@ -188,7 +204,7 @@ button:hover {
 .show {
   background-color: #D3BCC0;
   border-radius: 25px;
-  padding: 50px;
+  padding: 4vw;
   
   /* Vintage Pale Mauve */
 }
@@ -199,9 +215,8 @@ a{
 a :hover{
   color: rgb(250, 235, 215);
 }
-#searchform{
-  height: 300px;
-  width: 900px;
+#lyricsDisplay{
+  height: 200vw;
 }
 
 .hide {
