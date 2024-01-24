@@ -1,5 +1,6 @@
 //const APIKey = `` //<--insert own API key here
 const searchHistory = $(`#history`)
+const searchHistorySection = $(`.searchHistory`);
 const searchArr = [];
 const clearAllButton = $(`#clearAllButton`);
 const listenedButton = $(`#listenedButton`);
