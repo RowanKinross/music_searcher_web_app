@@ -206,14 +206,6 @@ button:hover {
   border-right: solid 3px black;
 }
 
-/* hiding sub-sections for dynamic transitions */
-.show {
-  background-color: #D3BCC0;
-  border-radius: 25px;
-  padding: 4vw;
-  
-  /* Vintage Pale Mauve */
-}
 a{
   text-decoration: none;
   color: #544738;
@@ -223,10 +215,6 @@ a :hover{
 }
 #lyricsDisplay{
   height: 200vw;
-}
-
-.hide {
-  display: none;
 }
 
 .searchHistory, #history {
@@ -240,4 +228,16 @@ a :hover{
 }
 #clearAllButton{
   background-color: #544738;
+}
+
+/* hiding sub-sections for dynamic transitions */
+.show {
+  background-color: #D3BCC0;
+  border-radius: 25px;
+  padding: 4vw;
+  
+  /* Vintage Pale Mauve */
+}
+.hide {
+  display: none;
 }
