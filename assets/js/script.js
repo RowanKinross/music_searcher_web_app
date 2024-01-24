@@ -39,6 +39,7 @@ function prependSongButton(){
 $(`#search-form`).on(`submit`, function(e){
   e.preventDefault()
   song = $(`#search-input`).val().trim().toUpperCase()
+  if (song != ``){
     // load the music info for that song
         //call load music info function
     displaySong()
@@ -58,7 +59,8 @@ $(`#search-form`).on(`submit`, function(e){
     $(`#stepOne`).addClass(`hide`)
     $(`#findYourSound`).addClass(`hide`)
     $(`#songDisplay`).removeClass(`hide`).addClass(`show`)
-      }
+  }
+}
 )
 
 //CLICK event when a user has listened to the song
@@ -171,30 +173,9 @@ function displaySong(){
 
 
 
-
-
 // 87da8ceb3cmsh47e55b14fb5df33p1b27fbjsn54acddce7032
 
-//   //get lyrics
-//   const songLyrics = data.hits[0].result
-//   console.log(songLyrics.id)
-//   // $(`#lyrics`).text(`${songLyrics}`)
-//   const lyricsID = songLyrics.id;
-//   const url = `https://genius-song-lyrics1.p.rapidapi.com/song/lyrics/?id=${lyricsID}`;
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '',
-// 		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
-// 	}
-// };
-//   fetch(url, options)
-//   .then(function(response){
-//     return response.json();
-//   })
-//   .then(function(data){
-//     console.log(data)
-//   })
+
 
 
 //!---------------

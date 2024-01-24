@@ -9,7 +9,7 @@ Development for this project is on pause, for now.
 
 An online, interactive, five-step programme to remove songs stuck in your head. This was a group project aimed to explore web-application possibilities with the introduction of (free) APIs. The motivation behind this project was to distill the recommended processes for removing "ear-worms" into a simple app that is accessible and more compacted than seeking out the steps individually. The app, if followed as intended, should successfully remove a song stuck in a users head and allow a user to focus on the issue in a minumally distractable format. Whilst the project is light-hearted, it does follow the stages set out by psychology today, and should function as a legitimately helpful resource. As a team, still in the early stages of our learning in web development, we learned a lot about how to plan, research, divide roles, work together and share code in a web-development context. We also furthered our knowledge, understanding and confidence in css styling, APIs and javascript. 
 
-<!-- !link to deployed page -->
+https://rowankinross.github.io/music_searcher_web_app/
 
 
 
