@@ -188,6 +188,7 @@ button:hover {
 .show {
   background-color: #D3BCC0;
   border-radius: 25px;
+  padding: 50px;
   
   /* Vintage Pale Mauve */
 }
@@ -202,6 +203,7 @@ a :hover{
   height: 300px;
   width: 900px;
 }
+
 .hide {
   display: none;
 }
