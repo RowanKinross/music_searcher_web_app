@@ -36,10 +36,9 @@
   </div>
 
     <div id="songDisplay" class="hide">
-      <h3>Step 2. We recommend listening to that song from start to finish, with no distractions.</h3>
       <p>We think the song stuck in your head is:</p>
-      <p id="songOptions" class="songOptions"></p>
-      <p> [please wait if the title doesn't show up immediately] </p>
+      <h3 id="songOptions" class="songOptions"></h3>
+      <h3>Step 2. We recommend listening to that song from start to finish, with no distractions.</h3>
       <div class="musicIcons">
         <a href="https://open.spotify.com/" target="_blank">Spotify <iconify-icon icon="bi:spotify"> </a> 
         <a href="https://www.youtube.com/" target="_blank"></iconify-icon>// Youtube <iconify-icon icon="mingcute:youtube-fill"> </a>
@@ -48,8 +47,8 @@
       <button id="listenedButton">Listening done, but it is still stuck in my head</button>
     </div>
 
+      <img alt="song image" width="200" id="songImage" class="hide">
     <div id="lyricsDisplay" class="hide">
-      <h2></h2>
       <h3>Step 3. Read the lyrics.</h3>
       <p id="lyrics"></p>
       <button id="lyricsButton">I have read the lyrics but it's still stuck in my head</button>
@@ -83,9 +82,9 @@
     <button id="clearAllButton">Clear search history</button>
   </section>
 
-  <section>
+  <footer>
     <h2>Copyrights ©</h2>
-  </section>
+  </footer>
   <!-- Day.js -->
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
