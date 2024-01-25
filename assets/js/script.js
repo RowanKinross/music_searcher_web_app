@@ -92,7 +92,6 @@ lyricsButton.on(`click`, function(e){
   $(`#activityDisplay`).removeClass(`hide`).addClass(`show`)
 })
 
-
 //sudoku fetch
 const queryURL = `https://sudoku-api.vercel.app/api/dosuku`
 fetch(queryURL)
