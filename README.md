@@ -17,7 +17,7 @@ https://rowankinross.github.io/music_searcher_web_app/
 The following image and gif show the appearance, usage and user interface of the application:
 
 ### screen-capture:
-<!-- ![dashboard screen-capture](./assets/images/) -->
+![earworm extractor page screen-capture](./assets/images/screencapture_earworm_extractor.png)
 ### gif demo:
 <!-- ![dashboard demo](./assets/images/) -->
 

@@ -1,4 +1,3 @@
-//const APIKey = `` //<--insert own API key here
 const searchHistory = $(`#history`)
 const searchHistorySection = $(`.searchHistory`);
 const searchArr = [];
@@ -9,6 +8,9 @@ const sudokuButton = $(`#sudokuButton`);
 const sudokuTable = $(`.sudokuTable`)
 const revealSudoku = $(`#revealSudoku`)
 const returnToStart = $(`#returnToStart`);
+
+
+
 
 //Get any locally stored search history
   searchHistory.empty()
@@ -56,6 +58,7 @@ $(`#search-form`).on(`submit`, function(e){
     $(`#stepOne`).addClass(`hide`)
     $(`#findYourSound`).addClass(`hide`)
     $(`#songDisplay`).removeClass(`hide`).addClass(`show`)
+    searchHistorySection.addClass(`hide`)
   }
 }
 )
@@ -78,12 +81,14 @@ listenedButton.on(`click`, function(e){
   e.preventDefault()
   $(`#songDisplay`).addClass(`hide`)
   $(`#lyricsDisplay`).removeClass(`hide`).addClass(`show`)
+  $(`#songImage`).removeClass(`hide`)
 })
 
 //CLICK event when a user has read the lyrics
 lyricsButton.on(`click`, function(e){
   e.preventDefault()
   $(`#lyricsDisplay`).addClass(`hide`)
+  $(`#songImage`).addClass(`hide`)
   $(`#activityDisplay`).removeClass(`hide`).addClass(`show`)
 })
 
@@ -98,8 +103,7 @@ fetch(queryURL)
   const newTable = data.newboard.grids[0].value
   const solution = data.newboard.grids[0].solution
 
-
-  //for loop to print array to html
+  //for loop to print sudoku array to html
   function printSudoku(sudoku){
   for (let i=0; i<9; i++){
     const row = sudoku[i]
@@ -131,8 +135,8 @@ fetch(queryURL)
     sudokuTable.empty()
     printSudoku(solution)
   })
-
 })
+
 //CLICK event when sudoku finished
 sudokuButton.on(`click`, function(e){
   e.preventDefault()
@@ -147,6 +151,7 @@ clearAllButton.on(`click`, function(e){
   searchHistory.empty()
 })
 
+//return to start button after 5 step process has been followed
 returnToStart.on(`click`, function(e){
   e.preventDefault()
   location.reload()
@@ -157,39 +162,27 @@ returnToStart.on(`click`, function(e){
 function displaySong(){
 //!----------
 //! commented out to reduce API requests
-// const search = song
-// const url = `https://genius-song-lyrics1.p.rapidapi.com/search/?q=${search}&per_page=1&page=1`;
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '',
-// 		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
-// 	}
-// };
-// fetch(url, options)
-// .then(function (response) {
-//   return response.json();
-// })
-// .then(function (data) {
-//   //get song title and artist
-//   const songTitle = data.hits[0].result.full_title
-//   $(`#songOptions`).text(`${songTitle}`);
-//   const lyricsURL = $(`<a href=${data.hits[0].result.url} target="_blank">`).text(`${songTitle} lyrics`)
-//   $(`#lyrics`).append(lyricsURL)
-
-// })
+const search = song
+const url = `https://genius-song-lyrics1.p.rapidapi.com/search/?q=${search}&per_page=1&page=1`;
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '87da8ceb3cmsh47e55b14fb5df33p1b27fbjsn54acddce7032',
+		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
+	}
+};
+fetch(url, options)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data)
+  //get song title and artist
+  const songTitle = data.hits[0].result.full_title
+  $(`#songOptions`).text(`${songTitle}`);
+  const lyricsURL = $(`<a href=${data.hits[0].result.url} target="_blank">`).text(`${songTitle} lyrics`)
+  $(`#lyrics`).append(lyricsURL)
+  const songImage = data.hits[0].result.song_art_image_url
+  $(`#songImage`).attr(`src`, songImage)
+})
 }
-
-
-
-// 87da8ceb3cmsh47e55b14fb5df33p1b27fbjsn54acddce7032
-
-
-
-
-//!---------------
-//! still to do: 
-      //! uncomment api
-  //! more styling
-      //! refactor code so there's no repeats/dry code, ideally tagging styles to classes and IDs instead of elements
-  //! add song recommendations to `step 5` display
