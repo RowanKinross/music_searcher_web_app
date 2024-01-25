@@ -17,9 +17,11 @@ https://rowankinross.github.io/music_searcher_web_app/
 The following image and gif show the appearance, usage and user interface of the application:
 
 ### screen-capture:
-![earworm extractor page screen-capture](./assets/images/screencapture_earworm_extractor.png)
+![earworm extractor desktop screen-capture](./assets/images/screencapture_earworm_extractor.png)
+### mobile-capture:
+![earworm extractor mobile screen-capture](./assets/images/screen_capturre_mobile_responsive.png)
 ### gif demo:
-<!-- ![dashboard demo](./assets/images/) -->
+![dashboard demo](./assets/images/demo_gif.gif)
 
 
 
@@ -39,6 +41,7 @@ As we set this as a mini-project for our team, we are not currently looking for 
 
 ### APIs (free)
 API 01: for lyrics/artist/song - https://rapidapi.com/Glavier/api/genius-song-lyrics1 
+
 API 02: for sudoku - https://sudoku-api.vercel.app/
 
 rapidAPI - https://rapidapi.com/hub
@@ -47,6 +50,7 @@ rapidAPI - https://rapidapi.com/hub
 
 ### Education
 Psychology Today - https://www.psychologytoday.com/gb/blog/women-who-stray/201505/5-steps-finally-get-song-out-your-head
+
 edX challenge materials for setting the challenge and providing us with the skills to take on this project.
 
 
