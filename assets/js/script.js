@@ -167,7 +167,7 @@ const url = `https://genius-song-lyrics1.p.rapidapi.com/search/?q=${search}&per_
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '87da8ceb3cmsh47e55b14fb5df33p1b27fbjsn54acddce7032',
+		'X-RapidAPI-Key': 'f1fc93eb62msh53d5de87ba02763p18b518jsn1d4079e9e397',
 		'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
 	}
 };
